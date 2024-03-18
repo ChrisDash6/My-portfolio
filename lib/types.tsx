@@ -1,3 +1,3 @@
 import { links } from "./data";
 
-export type sectionName=typeof links[number]['name']
+export type SectionName=typeof links[number]['name']

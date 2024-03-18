@@ -12,7 +12,7 @@ import { useActiveSectionContext } from '@/app/context/active-section-context';
 
 export default function Intro() {
   const{ref}=useSectionInView('Home',0.5);
-  const{setActiveSection, SetTimeOfLastClick}=useActiveSectionContext();
+  const{setActiveSection, setTimeOfLastClick}=useActiveSectionContext();
   return (
     <section ref={ref} id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
         <div className="flex items-center justify-center">
@@ -56,7 +56,7 @@ export default function Intro() {
           transition'
           onClick={()=>{
             setActiveSection ("Contact");
-            SetTimeOfLastClick(Date.now());
+            setTimeOfLastClick(Date.now());
           }}>Contact me here <BsArrowRight className='opacity-100 group-hover:translate-x-2 transition'/> </Link>
 
           <a className='group bg-gradient-to-b from-blue-200 to bg-blue-00 text-black px-7 py-3 flex items-center
